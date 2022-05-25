@@ -1,0 +1,15 @@
+- Code: system
+  Password: x77KHkGTqirWOan6BLjcOA==
+- Code: testUser
+  Email: testuser@gmail.com
+  ID_PrincipalType: u
+  Password: x77KHkGTqirWOan6BLjcOA==
+  Title: TestU
+- Code: e2eAdmin
+  FlagSystem: true
+  ID_Language: ru
+  ID_PrincipalType: u
+  Parents:
+    administrators: 
+  Password: IwR6wGf+XX25EWv3Ap8DBw==
+  Title: e2eAdmin

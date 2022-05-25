@@ -1,0 +1,23 @@
+﻿Годовой:
+  DateBegin: 2022-03-03T00:00:00.0000000
+  DateEnd: 2022-03-10T00:00:00.0000000
+  Description: 234324
+  ID_Type: peace
+  Sum: 800
+Сдельный:
+  DateBegin: 2022-04-01T00:00:00.0000000
+  DateEnd: 2022-04-30T00:00:00.0000000
+  Description: 456
+  ID_Type: WORK
+  Sum: 1600
+Пример:
+  DateBegin: 2022-04-01T00:00:00.0000000
+  DateEnd: 2022-04-30T00:00:00.0000000
+  Description: 123
+  ID_Type: WORK
+  Sum: 1500
+Аренда авто:
+  DateBegin: 2022-04-01T00:00:00.0000000
+  DateEnd: 2022-04-30T00:00:00.0000000
+  ID_Type: RENT
+  Sum: 1200

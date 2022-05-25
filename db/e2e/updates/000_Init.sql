@@ -1,0 +1,342 @@
+if not exists (select *
+from sys.schemas
+where name = N'e2e')
+	exec('create schema [e2e]')
+go
+/****** Object:  Table [e2e].[add]    Script Date: 24.05.2022 17:24:02 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [e2e].[add](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[DateBegin] [date] NULL,
+	[DateEnd] [date] NULL,
+	[Name] [nvarchar](255) NULL,
+	[Description] [nvarchar](1000) NULL,
+	[Sum] [int] NULL,
+	[ID_Type] [int] NULL,
+ CONSTRAINT [PK_e2e_add] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY],
+ CONSTRAINT [UQ_e2e_add_Name] UNIQUE NONCLUSTERED 
+(
+	[Name] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [e2e].[dataSecurityReadOnly]    Script Date: 24.05.2022 17:24:02 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [e2e].[dataSecurityReadOnly](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[Text] [nvarchar](255) NULL,
+	[Number] [int] NULL,
+ CONSTRAINT [PK_e2e_dataSecurityReadOnly] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY],
+ CONSTRAINT [UQ_e2e_dataSecurityReadOnly_Text] UNIQUE NONCLUSTERED 
+(
+	[Text] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [e2e].[designer]    Script Date: 24.05.2022 17:24:02 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [e2e].[designer](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[DateBegin] [date] NULL,
+	[DateEnd] [date] NULL,
+	[Name] [nvarchar](255) NULL,
+	[Description] [nvarchar](1000) NULL,
+	[Sum] [int] NULL,
+	[ID_Type] [int] NULL,
+ CONSTRAINT [PK_e2e_designer] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY],
+ CONSTRAINT [UQ_e2e_designer_Name] UNIQUE NONCLUSTERED 
+(
+	[Name] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [e2e].[filesUpload]    Script Date: 24.05.2022 17:24:02 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [e2e].[filesUpload](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[Code] [varchar](100) NOT NULL,
+	[ID_File] [int] NULL,
+ CONSTRAINT [PK_e2e_filesUpload] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY],
+ CONSTRAINT [UQ_e2e_filesUpload_Code] UNIQUE NONCLUSTERED 
+(
+	[Code] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [e2e].[filesWhiteList]    Script Date: 24.05.2022 17:24:02 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [e2e].[filesWhiteList](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[Code] [int] NOT NULL,
+	[ID_File] [int] NULL,
+ CONSTRAINT [PK_e2e_filesWhiteList] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY],
+ CONSTRAINT [UQ_e2e_filesWhiteList_Code] UNIQUE NONCLUSTERED 
+(
+	[Code] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [e2e].[integration]    Script Date: 24.05.2022 17:24:02 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [e2e].[integration](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[Code] [int] NULL,
+	[Title] [nvarchar](255) NULL,
+	[boolean] [bit] NULL,
+ CONSTRAINT [PK_e2e_integration] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY],
+ CONSTRAINT [UQ_e2e_integration_Code] UNIQUE NONCLUSTERED 
+(
+	[Code] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [e2e].[internalModulesDocGen]    Script Date: 24.05.2022 17:24:02 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [e2e].[internalModulesDocGen](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [nvarchar](255) NULL,
+	[LastName] [nvarchar](255) NULL,
+ CONSTRAINT [PK_e2e_internalModulesDocGen] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY],
+ CONSTRAINT [UQ_e2e_internalModulesDocGen_Name] UNIQUE NONCLUSTERED 
+(
+	[Name] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [e2e].[list]    Script Date: 24.05.2022 17:24:02 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [e2e].[list](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[DateBegin] [date] NULL,
+	[DateEnd] [date] NULL,
+	[Name] [nvarchar](255) NULL,
+	[Description] [nvarchar](1000) NULL,
+	[Sum] [int] NULL,
+	[ID_Type] [int] NULL,
+ CONSTRAINT [PK_e2e_list] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY],
+ CONSTRAINT [UQ_e2e_list_Name] UNIQUE NONCLUSTERED 
+(
+	[Name] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [e2e].[listDataActive]    Script Date: 24.05.2022 17:24:02 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [e2e].[listDataActive](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[DateBegin] [date] NULL,
+	[DateEnd] [date] NULL,
+	[Name] [nvarchar](1000) NULL,
+	[Description] [nvarchar](1000) NULL,
+	[Sum] [int] NULL,
+	[ID_Type] [int] NULL,
+ CONSTRAINT [PK_e2e_listDataActive] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY],
+ CONSTRAINT [UQ_e2e_listDataActive_Name] UNIQUE NONCLUSTERED 
+(
+	[Name] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [e2e].[merging]    Script Date: 24.05.2022 17:24:02 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [e2e].[merging](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[DateBegin] [date] NULL,
+	[DateEnd] [date] NULL,
+	[Name] [nvarchar](255) NULL,
+	[Description] [nvarchar](1000) NULL,
+	[Sum] [int] NULL,
+	[ID_Type] [int] NULL,
+ CONSTRAINT [PK_e2e_merging] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY],
+ CONSTRAINT [UQ_e2e_merging_Name] UNIQUE NONCLUSTERED 
+(
+	[Name] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [e2e].[viewList]    Script Date: 24.05.2022 17:24:02 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [e2e].[viewList](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[DateBegin] [date] NULL,
+	[DateEnd] [date] NULL,
+	[Name] [nvarchar](255) NULL,
+	[Description] [nvarchar](1000) NULL,
+	[Sum] [int] NULL,
+	[ID_Type] [int] NULL,
+ CONSTRAINT [PK_e2e_viewList] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY],
+ CONSTRAINT [UQ_e2e_viewList_Name] UNIQUE NONCLUSTERED 
+(
+	[Name] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [e2e].[viewListAddInline]    Script Date: 24.05.2022 17:24:02 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [e2e].[viewListAddInline](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[Code] [nvarchar](255) NOT NULL,
+	[Title] [nvarchar](255) NULL,
+ CONSTRAINT [PK_e2e_viewListAddInline] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY],
+ CONSTRAINT [UQ_e2e_viewListAddInline_Code] UNIQUE NONCLUSTERED 
+(
+	[Code] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [e2e].[viewListSave]    Script Date: 24.05.2022 17:24:02 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [e2e].[viewListSave](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[Code] [varchar](100) NOT NULL,
+	[Title] [varchar](100) NOT NULL,
+ CONSTRAINT [PK_e2e_viewListSave] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY],
+ CONSTRAINT [UQ_e2e_viewListSave_Code] UNIQUE NONCLUSTERED 
+(
+	[Code] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [e2e].[viewNav]    Script Date: 24.05.2022 17:24:02 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [e2e].[viewNav](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[Code] [int] NULL,
+ CONSTRAINT [PK_e2e_viewNav] PRIMARY KEY CLUSTERED 
+(
+	[ID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY],
+ CONSTRAINT [UQ_e2e_viewNav_Code] UNIQUE NONCLUSTERED 
+(
+	[Code] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+ALTER TABLE [e2e].[add]  WITH CHECK ADD  CONSTRAINT [FK_e2e_viewListAddInline_e2e_add_ID_Type] FOREIGN KEY([ID_Type])
+REFERENCES [e2e].[viewListAddInline] ([ID])
+GO
+ALTER TABLE [e2e].[add] CHECK CONSTRAINT [FK_e2e_viewListAddInline_e2e_add_ID_Type]
+GO
+ALTER TABLE [e2e].[designer]  WITH CHECK ADD  CONSTRAINT [FK_e2e_viewListAddInline_e2e_designer_ID_Type] FOREIGN KEY([ID_Type])
+REFERENCES [e2e].[viewListAddInline] ([ID])
+GO
+ALTER TABLE [e2e].[designer] CHECK CONSTRAINT [FK_e2e_viewListAddInline_e2e_designer_ID_Type]
+GO
+ALTER TABLE [e2e].[filesUpload]  WITH CHECK ADD  CONSTRAINT [FK_mdt_File_e2e_filesUpload_ID_File] FOREIGN KEY([ID_File])
+REFERENCES [mdt].[File] ([ID])
+GO
+ALTER TABLE [e2e].[filesUpload] CHECK CONSTRAINT [FK_mdt_File_e2e_filesUpload_ID_File]
+GO
+ALTER TABLE [e2e].[filesWhiteList]  WITH CHECK ADD  CONSTRAINT [FK_mdt_File_e2e_filesWhiteList_ID_File] FOREIGN KEY([ID_File])
+REFERENCES [mdt].[File] ([ID])
+GO
+ALTER TABLE [e2e].[filesWhiteList] CHECK CONSTRAINT [FK_mdt_File_e2e_filesWhiteList_ID_File]
+GO
+ALTER TABLE [e2e].[list]  WITH CHECK ADD  CONSTRAINT [FK_e2e_viewListAddInline_e2e_list_ID_Type] FOREIGN KEY([ID_Type])
+REFERENCES [e2e].[viewListAddInline] ([ID])
+GO
+ALTER TABLE [e2e].[list] CHECK CONSTRAINT [FK_e2e_viewListAddInline_e2e_list_ID_Type]
+GO
+ALTER TABLE [e2e].[listDataActive]  WITH CHECK ADD  CONSTRAINT [FK_e2e_viewListAddInline_e2e_listDataActive_ID_Type] FOREIGN KEY([ID_Type])
+REFERENCES [e2e].[viewListAddInline] ([ID])
+GO
+ALTER TABLE [e2e].[listDataActive] CHECK CONSTRAINT [FK_e2e_viewListAddInline_e2e_listDataActive_ID_Type]
+GO
+ALTER TABLE [e2e].[merging]  WITH CHECK ADD  CONSTRAINT [FK_e2e_viewListAddInline_e2e_merging_ID_Type] FOREIGN KEY([ID_Type])
+REFERENCES [e2e].[viewListAddInline] ([ID])
+GO
+ALTER TABLE [e2e].[merging] CHECK CONSTRAINT [FK_e2e_viewListAddInline_e2e_merging_ID_Type]
+GO
+ALTER TABLE [e2e].[viewList]  WITH CHECK ADD  CONSTRAINT [FK_e2e_viewListAddInline_e2e_viewList_ID_Type] FOREIGN KEY([ID_Type])
+REFERENCES [e2e].[viewListAddInline] ([ID])
+GO
+ALTER TABLE [e2e].[viewList] CHECK CONSTRAINT [FK_e2e_viewListAddInline_e2e_viewList_ID_Type]
+GO
+INSERT INTO [e2e].[dataSecurityReadOnly] (Text, Number) values ('Пример1', 100)
+GO
+UPDATE [docgen].[Settings]
+SET FlagPdf = 1
+GO
+UPDATE [docgen].[Settings]
+SET FlagDocx = 1

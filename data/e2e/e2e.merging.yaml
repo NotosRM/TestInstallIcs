@@ -1,0 +1,24 @@
+﻿Договор 2:
+  DateBegin: 2022-03-03T00:00:00.0000000
+  DateEnd: 2022-03-10T00:00:00.0000000
+  Description: 234324
+  ID_Type: peace
+  Sum: 0
+Договор 1:
+  DateBegin: 2022-04-01T00:00:00.0000000
+  DateEnd: 2022-04-30T00:00:00.0000000
+  Description: 456
+  ID_Type: WORK
+  Sum: 1000
+Пример:
+  DateBegin: 2022-04-01T00:00:00.0000000
+  DateEnd: 2022-04-30T00:00:00.0000000
+  Description: 123
+  ID_Type: WORK
+  Sum: 1000
+Пример1:
+  DateBegin: 2022-04-01T00:00:00.0000000
+  DateEnd: 2022-04-30T00:00:00.0000000
+  Description: Привет
+  ID_Type: test
+  Sum: 10000

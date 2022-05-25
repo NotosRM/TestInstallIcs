@@ -1,0 +1,23 @@
+﻿{
+ "rows": [
+  {
+   "cols": [
+    {
+     "width": 6,
+     "type": "field",
+     "options": {
+      "field": "Code"
+     }
+    },
+    {
+     "width": 6,
+     "type": "field",
+     "options": {
+      "field": "ID_File",
+      "control": "file"
+     }
+    }
+   ]
+  }
+ ]
+}

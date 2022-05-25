@@ -1,0 +1,19 @@
+﻿Deleted: false
+Fields:
+  Code:
+    Deleted: false
+    SortOrder: 1
+    Title: Код
+  ID:
+    Deleted: false
+    Primary: true
+    Readonly: true
+    SortOrder: 0
+  Title:
+    Deleted: false
+    SortOrder: 2
+    Title: Название
+inline_AddInRow: true
+Readonly: false
+tag_Enabled: false
+Title: viewListAddInline

@@ -1,0 +1,13 @@
+﻿Columns:
+  DateBegin:
+    Position: 0
+  DateEnd:
+    Position: 1
+  Description:
+    Position: 4
+  ID_Type$:
+    Position: 2
+  Name:
+    Position: 5
+  Sum:
+    Position: 3

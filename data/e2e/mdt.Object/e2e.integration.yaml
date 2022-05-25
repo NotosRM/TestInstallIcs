@@ -1,0 +1,22 @@
+﻿Deleted: false
+Fields:
+  boolean:
+    Deleted: false
+    SortOrder: 3
+    Title: Чекбокс
+  Code:
+    Deleted: false
+    SortOrder: 1
+    Title: Код
+  ID:
+    Deleted: false
+    Primary: true
+    Readonly: true
+    SortOrder: 0
+  Title:
+    Deleted: false
+    SortOrder: 2
+    Title: Название
+Readonly: false
+tag_Enabled: false
+Title: integration

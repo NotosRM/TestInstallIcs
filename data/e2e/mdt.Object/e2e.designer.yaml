@@ -1,0 +1,36 @@
+﻿Deleted: false
+Fields:
+  DateBegin:
+    Deleted: false
+    SortOrder: 1
+    Title: Дата начала
+  DateEnd:
+    Deleted: false
+    SortOrder: 2
+    Title: Дата окончания
+  Description:
+    Deleted: false
+    SortOrder: 4
+    Title: Описание
+  ID:
+    Deleted: false
+    Primary: true
+    Readonly: true
+    SortOrder: 0
+  ID_Type:
+    Deleted: false
+    ID_RefObject: e2e.viewListAddInline
+    SortOrder: 6
+    Title: Тип контракта
+  Name:
+    Deleted: false
+    SortOrder: 3
+    Title: Название
+  Sum:
+    Deleted: false
+    ID_ObjectFieldType: money
+    SortOrder: 5
+    Title: Сумма контракта
+Readonly: false
+tag_Enabled: false
+Title: viewListDesigner

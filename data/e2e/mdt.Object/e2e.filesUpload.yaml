@@ -1,0 +1,18 @@
+﻿Deleted: false
+Fields:
+  Code:
+    Deleted: false
+    SortOrder: 1
+  ID:
+    Deleted: false
+    Primary: true
+    Readonly: true
+    SortOrder: 0
+  ID_File:
+    Deleted: false
+    ID_RefObject: mdt.File
+    SortOrder: 2
+    Title: Договор
+Readonly: false
+tag_Enabled: false
+Title: filesUpload

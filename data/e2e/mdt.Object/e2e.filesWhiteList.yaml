@@ -1,0 +1,20 @@
+﻿Deleted: false
+Fields:
+  Code:
+    Deleted: false
+    SortOrder: 1
+    Title: Код
+  ID:
+    Deleted: false
+    Primary: true
+    Readonly: true
+    SortOrder: 0
+  ID_File:
+    Deleted: false
+    ID_RefObject: mdt.File
+    Nullable: true
+    SortOrder: 2
+    Title: Договор
+Readonly: false
+tag_Enabled: false
+Title: whiteList

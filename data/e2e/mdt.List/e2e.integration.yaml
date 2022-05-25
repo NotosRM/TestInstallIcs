@@ -1,0 +1,7 @@
+﻿Columns:
+  boolean:
+    Position: 1
+  Code:
+    Position: 0
+  Title:
+    Position: 2

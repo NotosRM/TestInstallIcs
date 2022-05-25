@@ -1,0 +1,20 @@
+﻿Deleted: false
+Fields:
+  ID:
+    Deleted: false
+    Primary: true
+    Readonly: true
+    SortOrder: 0
+  Number:
+    Deleted: false
+    Readonly: true
+    SortOrder: 2
+    Title: Числовое
+  Text:
+    Deleted: false
+    Readonly: false
+    SortOrder: 1
+    Title: Текстовое
+Readonly: true
+tag_Enabled: false
+Title: dataSecurityReadOnly

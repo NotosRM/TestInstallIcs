@@ -1,0 +1,14 @@
+﻿Deleted: false
+Fields:
+  Code:
+    Deleted: false
+    SortOrder: 1
+    Title: Код
+  ID:
+    Deleted: false
+    Primary: true
+    Readonly: true
+    SortOrder: 0
+Readonly: false
+tag_Enabled: false
+Title: viewNav

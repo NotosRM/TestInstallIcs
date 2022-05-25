@@ -1,0 +1,78 @@
+﻿data:
+  Nodes:
+    files:
+      Nodes:
+        upload:
+          ID_Object: e2e.filesUpload
+          Title: upload
+        whiteList:
+          ID_Object: e2e.filesWhiteList
+          Title: whiteList
+      Title: files
+    security:
+      Nodes:
+        readOnly:
+          ID_Object: e2e.dataSecurityReadOnly
+          Title: readOnly
+      Title: security
+  Position: 3
+  Title: data
+integration:
+  Nodes:
+    export:
+      ID_Object: e2e.integration
+      Title: export
+    import:
+      ID_Object: e2e.integration
+      Title: import
+  Position: 2
+  Title: integration
+internalModules:
+  Nodes:
+    docGen:
+      ID_Object: e2e.internalModulesDocGen
+      Title: docGen
+  Position: 1
+  Title: internalModules
+view:
+  Nodes:
+    list:
+      Nodes:
+        add:
+          ID_Object: e2e.add
+          Title: add
+        addInline:
+          ID_Object: e2e.viewListAddInline
+          Title: addInline
+        copy:
+          ID_Object: e2e.listDataActive
+          Title: copy
+        delete:
+          ID_Object: e2e.viewList
+          Title: delete
+        designer:
+          ID_Object: e2e.designer
+          Title: designer
+        list:
+          ID_Object: e2e.list
+          Title: list
+        merging:
+          ID_Object: e2e.merging
+          Title: merging
+        save:
+          ID_Object: e2e.viewListSave
+          Title: save
+      Title: list
+    nav:
+      ID_Object: e2e.viewNav
+      Nodes:
+        navSide:
+          ID_Object: e2e.viewNav
+          Nodes:
+            navChild:
+              ID_Object: e2e.viewNav
+              Title: navChild
+          Title: navSide
+      Title: navigation
+  Position: 4
+  Title: view

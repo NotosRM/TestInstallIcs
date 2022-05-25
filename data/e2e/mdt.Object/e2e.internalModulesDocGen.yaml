@@ -1,0 +1,18 @@
+﻿Deleted: false
+Fields:
+  ID:
+    Deleted: false
+    Primary: true
+    Readonly: true
+    SortOrder: 0
+  LastName:
+    Deleted: false
+    SortOrder: 2
+    Title: Фамилия
+  Name:
+    Deleted: false
+    SortOrder: 1
+    Title: Имя
+Readonly: false
+tag_Enabled: false
+Title: internalModulesDocGen

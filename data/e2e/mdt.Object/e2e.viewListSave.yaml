@@ -1,0 +1,17 @@
+﻿Deleted: false
+Fields:
+  Code:
+    Deleted: false
+    SortOrder: 1
+  ID:
+    Deleted: false
+    Primary: true
+    Readonly: true
+    SortOrder: 0
+  Title:
+    Deleted: false
+    SortOrder: 2
+FlagHierarchy: false
+Readonly: false
+tag_Enabled: false
+Title: viewListSave
